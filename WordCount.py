@@ -10,11 +10,15 @@ class WordCountCommand(sublime_plugin.TextCommand):
 			self.view.erase_status("word_count")
 
 class WordCountPopupCommand(sublime_plugin.TextCommand):
-	def run(self, edit):
+	def run(self, edit, event):
+		pos = self.view.layout_to_text((0, event["y"]))
 		status = Helper.getAsHTML(self.view)
 
 		if status:
-			self.view.show_popup(status, flags=sublime.HIDE_ON_MOUSE_MOVE_AWAY)
+			self.view.show_popup(status, flags=sublime.HIDE_ON_MOUSE_MOVE_AWAY, location=pos)
+
+	def want_event(self):
+		return True
 
 
 class Helper():
@@ -36,7 +40,7 @@ class Helper():
 
 	def getSettings():
 		settings = {}
-		set_file = sublime.load_settings("wordcount.sublime-settings")
+		set_file = sublime.load_settings("WordCount.sublime-settings")
 		settings["words"] = set_file.get("show_word_count", True)
 		settings["chars"] = set_file.get("show_char_count", True)
 		settings["lines"] = set_file.get("show_line_count", True)
