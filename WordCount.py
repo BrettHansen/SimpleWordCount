@@ -40,7 +40,6 @@ class Helper():
 		settings["words"] = set_file.get("show_word_count", True)
 		settings["chars"] = set_file.get("show_char_count", True)
 		settings["lines"] = set_file.get("show_line_count", True)
-		print(settings)
 		return settings
 
 	def countWords(view):
