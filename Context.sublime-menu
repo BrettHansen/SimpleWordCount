@@ -1,6 +1,6 @@
 [
 	{
-		"id" : "WordCount",
+		"id" : "SimpleWordCount",
 		"caption" : "Word Count",
 		"command" : "word_count_popup"
 	}

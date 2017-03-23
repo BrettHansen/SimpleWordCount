@@ -1,0 +1,7 @@
+{
+	"show_word_count" : true,
+	"show_char_count" : true,
+	"show_line_count" : true,
+	"run_continuously" : true,
+	"time_delay" : 1
+}
