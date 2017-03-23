@@ -1,0 +1,7 @@
+[
+	{
+		"id" : "WordCount",
+		"caption" : "Word Count",
+		"command" : "word_count_popup"
+	}
+]
