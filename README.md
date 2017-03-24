@@ -1,10 +1,10 @@
-# SimpleWordCount Sublime Plugin
+# Simple Word Count - Sublime Plugin
 
 This is a very simple ST3 plugin to count words, characters, and lines in the current file.
 
 ## Installation
 
-Simply put the entire `WordCount` directory into your ST3 `Packages` directory.
+Simply put the entire `SimpleWordCount` directory into your ST3 `Packages` directory.
 
 ## Usage
 
